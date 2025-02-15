@@ -81,7 +81,7 @@ public class MenuFrame extends SimpleFrame {
         disableItem.addActionListener(itemListener);
 
 
-        // Second ActionListener (Handles enabling/disabling text movement)
+        //-------------Second ActionListener (Handles enabling/disabling text movement)-----------------
         ActionListener animationListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -97,7 +97,7 @@ public class MenuFrame extends SimpleFrame {
                 }
             }
 
-            // Method to start moving text from left to right
+            //-------------------Method to start moving text from left to right------------------
             private void startMovingText() {
                 if (textMover == null || !textMover.isRunning()) {
                     textMover = new Timer(300, new ActionListener() { // Runs every 100ms
@@ -115,7 +115,7 @@ public class MenuFrame extends SimpleFrame {
                 }
             }
 
-            // Method to stop text movement
+            //-------------Method to stop text movement-------------------
             private void stopMovingText() {
                 if (textMover != null) {
                     textMover.stop();
@@ -127,7 +127,7 @@ public class MenuFrame extends SimpleFrame {
         enableItem.addActionListener(animationListener);
         disableItem.addActionListener(animationListener);
 
-        // Open new panel when "Secret Word" is clicked
+        //---------------Open new panel when "Secret Word" is clicked---------------
         secretWordItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -160,7 +160,7 @@ public class MenuFrame extends SimpleFrame {
     }
 
 
-    // Method to open the SecretPanel
+    //--------------Method to open the SecretPanel-----------------
     private void openSecretWordPanel() {
         // Create a new frame to display the JPanel
         JFrame secretFrame = new JFrame("Secret Word Panel");
@@ -168,7 +168,7 @@ public class MenuFrame extends SimpleFrame {
         secretFrame.setLocationRelativeTo(this); // Center the new window
         secretFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
-        // Add the custom SecretPanel to the frame
+        //-------------Add the custom SecretPanel to the frame--------------
         SecretPanel secretPanel = new SecretPanel();
         secretFrame.add(secretPanel);
 
