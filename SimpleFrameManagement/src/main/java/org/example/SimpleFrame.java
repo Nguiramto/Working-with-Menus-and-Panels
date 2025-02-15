@@ -6,6 +6,7 @@ public class SimpleFrame extends JFrame {
 
     public SimpleFrame() {
 
+        //-----------Setting Size of the Frame------------
         this.setSize(600,600);
         this.setLocation(600,600);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
